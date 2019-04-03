@@ -101,9 +101,21 @@ Finally, restart you command window and run python. You should now see the pytho
 ```
 Missing private key file C:\Users\matthew.mckee\Documents\projects\xronos\ximera\private_key.pem
 ```
+* Redis Connection to 127.0.0.1:6379 failed
+ ```
+ Error Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
 
-* Can't find module '../build/Release/hash'
-  * **(RESOLVED):** Seems to have been caused by a bad install. Running install again did not resolve the issue. Had to delete repo on PC, clone it again, and run install.
+Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+ ```
+
+* **(RESOLVED):** Can't find module '../build/Release/hash'
+  * Seems to have been caused by a bad install. Running install again did not resolve the issue. Had to delete repo on PC, clone it again, and run install.
 ```
 module.js:549
     throw err;
