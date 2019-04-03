@@ -53,6 +53,13 @@ Create a batch file with the following lines.
 ```
 
 ### Step 5
+Globally install windows build tools and node-gyp
+  1. Open the command window and run: `npm install --global --production windows-build-tools`
+  1. Next, install node-gyp: `npm install --global node-gyp`
+  1. Finally, restart you command window and run python. You should now see the python shell (exit out with `ctrl + z`). 
+  1. Run `npm install` within the ximera directory.
+
+### Step 5
 Open the command window, run the batch file and install the node dependencies:
   1. Run the batch file you just created by typing in the name of the batch file
   1. Change to the ximera server folder: `cd ximera`
