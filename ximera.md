@@ -92,7 +92,7 @@ Open your browser and go to localhost:3000
 ## Errors
 ### MongoDB
 
-* Running `mongorestore` successfully imported the test database, however, received the following error in the execution output:
+* **(UNRESOLVED):** Running `mongorestore` successfully imported the test database, however, received the following error in the execution output:
 ```
 2019-04-02T14:25:06.036-0400 Failed: test.courses: error creating indexes for test.courses: createIndex error: The field 'safe' is not valid for an index specification. Specification: { safe: null, name: "slug_1", ns: "test.courses", background: true, key: { slug: 1 }
 ```
@@ -102,7 +102,7 @@ Open your browser and go to localhost:3000
 * **(RESOLVED):** Can't find python executable
   * Added step 5
 
-* Missing Private key file
+* **(UNRESOLVED):** Missing Private key file
 ```
 Missing private key file C:\Users\matthew.mckee\Documents\projects\xronos\ximera\private_key.pem
 ```
@@ -147,7 +147,7 @@ Error: Cannot find module '../build/Release/hash'
 ```
 
 ## Warnings
-* acron-dynamic-import@4.0.0 requires a peer
+* **(UNRESOLVED):** acron-dynamic-import@4.0.0 requires a peer
 ```
 WARN acorn-dynamic-import@4.0.0 requires a peer of acorn@^6.0.0 but none is installed. You must install peer dependencies yourself.
 ```
