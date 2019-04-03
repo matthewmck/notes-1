@@ -1,12 +1,10 @@
 # Installing Ximera
 **Table of Contents**
 * [Windows Installation Guide](#user-content-windows-installation-guide)
-* [Resolved Errors](#user-content-common-Errors)
-   * [Can't find Python executable](#user-content-cant-find-python-executable)
-* [Unresolved Errors](#user-content-unresolved-errors)
+* [Errors](#user-content-errors)
   * [MongoDB](#user-content-mongodb)
   * [Node](#user-content-node)
-* [Unresolved Warnings](#user-content-unresolved-warnings)
+* [Warnings](#user-content-warnings)
 
 ## Windows Installation Guide
 
@@ -59,42 +57,40 @@ Globally install windows build tools and node-gyp
   1. Finally, restart you command window and run python. You should now see the python shell (exit out with `ctrl + z`). 
   1. Run `npm install` within the ximera directory.
 
-### Step 5
+### Step 6
 Open the command window, run the batch file and install the node dependencies:
   1. Run the batch file you just created by typing in the name of the batch file
   1. Change to the ximera server folder: `cd ximera`
   1. Run `npm install`
 
-### Step 6
+### Step 7
 In the same command window tab, run a new instance of mongodb. If this is a new command window tab, be sure to run the batch file again. run the same cmd from earlier, `/Users/matthew.mckee/mongodb/bin/mongod.exe --dbpath=/Users/matthew.mckee/mongodb-data`
 
 Leave this tab open. Whenever you close it or close this mongodb session you will need to repeat this step.
 
-### Step 7
+### Step 8
 Open a new command window tab. Run the batch file again. Afterwards, download and import the test database into mongodb.
    1. Download the [test database](https://drive.google.com/file/d/0B-Xh-RAGRDU8WHAxeUJfVGpTSk0/edit)
    1. Extract the test database
    1. Import the test database by running: `mongorestore -d db_name folder_path`
       * example: `mongorestore -d test C:\Users\matthew.mckee\Downloads\test`
 
-### Step 8
+### Step 9
+Install Redis for Windows
+  1. Download the latest version [here](https://github.com/dmajkic/redis/downloads)
+  1. Extract the folder
+  1. Run `redis-server.exe`
+
+### Step 10
 In the same command window tab, start the app
    1. run the batch file again if this is a new tab
    1. ensure you are in the ximera directory
    1. run `node app.js`
    
-### Step 9
+### Step 11
 Open your browser and go to localhost:3000
 
-## Resolved Errors
-### Can't find Python executable
-If you haven't got python installed along with all the node-gyp dependencies, simply open Powershell or Git Bash with administrator privileges and run: `npm install --global --production windows-build-tools`
-
-Next, install node-gyp: `npm install --global node-gyp`
-
-Finally, restart you command window and run python. You should now see the python shell (exit out with `ctrl + z`). Run npm install within the ximera directory.
-
-## Unresolved Errors
+## Errors
 ### MongoDB
 
 * Running `mongorestore` successfully imported the test database, however, received the following error in the execution output:
@@ -104,11 +100,15 @@ Finally, restart you command window and run python. You should now see the pytho
 
 ### Node
 
+* **(RESOLVED):** Can't find python executable
+  * Added step 5
+
 * Missing Private key file
 ```
 Missing private key file C:\Users\matthew.mckee\Documents\projects\xronos\ximera\private_key.pem
 ```
-* Redis Connection to 127.0.0.1:6379 failed
+* **(RESOLVED):** Redis Connection to 127.0.0.1:6379 failed
+  * Added step 9
  ```
  Error Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
 events.js:183
@@ -147,7 +147,7 @@ Error: Cannot find module '../build/Release/hash'
     at Module.load (module.js:565:32)
 ```
 
-## Unresolved Warnings
+## Warnings
 * acron-dynamic-import@4.0.0 requires a peer
 ```
 WARN acorn-dynamic-import@4.0.0 requires a peer of acorn@^6.0.0 but none is installed. You must install peer dependencies yourself.
