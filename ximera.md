@@ -103,7 +103,7 @@ Missing private key file C:\Users\matthew.mckee\Documents\projects\xronos\ximera
 ```
 
 * Can't find module '../build/Release/hash'
-  * ![#f03c15](RESOLVED): Seems to have been caused by a bad install. Running install again did not resolve the issue. Had to delete repo on PC, clone it again, and run install.
+  * **(RESOLVED):** Seems to have been caused by a bad install. Running install again did not resolve the issue. Had to delete repo on PC, clone it again, and run install.
 ```
 module.js:549
     throw err;
