@@ -55,7 +55,6 @@ Globally install windows build tools and node-gyp
   1. Open the command window and run: `npm install --global --production windows-build-tools`
   1. Next, install node-gyp: `npm install --global node-gyp`
   1. Finally, restart you command window and run python. You should now see the python shell (exit out with `ctrl + z`). 
-  1. Run `npm install` within the ximera directory.
 
 ### Step 6
 Open the command window, run the batch file and install the node dependencies:
