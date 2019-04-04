@@ -1,10 +1,15 @@
-# Installing Ximera
+# Ximera
 **Table of Contents**
+* [Repos](#user-content-repos)
 * [Windows Installation Guide](#user-content-windows-installation-guide)
 * [Errors](#user-content-errors)
   * [MongoDB](#user-content-mongodb)
   * [Node](#user-content-node)
 * [Warnings](#user-content-warnings)
+
+## Repos
+* Main repo: [Ximera](https://github.com/XimeraProject/server)
+* UF variant: [XronosUF](https://github.com/XronosUF/Server)
 
 ## Windows Installation Guide
 
