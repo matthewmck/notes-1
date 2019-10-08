@@ -19,13 +19,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install nodejs
 ```
 
-### Step 2: Install Gulp
-```
-sudo npm install gulp-cli -g
-sudo npm install gulp -D
-```
-
-### Step 3: Install MongoDB
+### Step 2: Install MongoDB
 [Click here for a quick list of mongo commands](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#start-mongodb)
 
 #### 1. Import the public key used by the package management system
@@ -63,7 +57,7 @@ sudo service mongod start
 mongorestore --db ximera /home/matt/Downloads/database/test
 ```
 
-### Step 4: Install Redis
+### Step 3: Install Redis
 ```
 sudo apt update
 sudo apt install redis-server
@@ -109,23 +103,23 @@ If it is running without any errors, this command will produce output similar to
            └─2445 /usr/bin/redis-server 127.0.0.1:6379
 ```
 
-### Step 5: Install build-essential
+### Step 4: Install build-essential
 this includes the g++ compiler
 ```
 sudo apt install build-essential
 ```
 
-### Step 6: Install Node.js Legacy
+### Step 5: Install Node.js Legacy
 ```
 sudo apt-get install nodejs-legacy
 ```
 
-### Step 7: CLone the repository
+### Step 6: CLone the repository
 ```
 git clone https://github.com/kisonecat/ximera
 ```
 
-### Step 8: Create the .env with content inside the ximera directory
+### Step 7: Create the .env with content inside the ximera directory
 ```
  XIMERA_MONGO_URL=127.0.0.1
  XIMERA_MONGO_DATABASE=ximera
@@ -137,7 +131,22 @@ git clone https://github.com/kisonecat/ximera
  GITHUB_WEBHOOK_SECRET=githubwebhooksecret
 ```
 
+### Step 8: Install dev dependencies
+```
+npm install --save-dev aliasify@1.9.0 babel-preset-env@1.6.1 babel-preset-es2015@6.24.1 browserify@13.0.0 chai@3.5.0 gulp@3.9.1 gulp-if@2.0.0 gulp-less@3.0.5 gulp-minify-css@1.2.4 gulp-sass@3.2.1 gulp-sourcemaps@1.6.0 gulp-util@3.0.7 lodash.assign@4.0.7 napa@2.3.0 should@9.0.2 supertest@1.2.0 vinyl-buffer@1.0.0 vinyl-source-stream@1.1.0 watchify@3.7.0 yargs@3.10.0
+```
+
+### Step ???
+```
+npm install gulp-pug-lint@github:akoutmos/gulp-pug-lint
+```
+
 ### Step 9: Install the node dependencies
 ```
 npm install
+```
+
+### Step 10: Create private key
+```
+openssl genrsa -out private_key.pem 2048
 ```
